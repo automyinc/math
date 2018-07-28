@@ -1,0 +1,26 @@
+package math;
+
+extern Vector4uc = {21, 2, 4, 1, 1};		// {MATRIX, 2D, 4 rows, 1 cols, UINT8}
+
+extern Vector2i = {21, 2, 2, 1, 7};			// {MATRIX, 2D, 2 rows, 1 cols, INT32}
+extern Vector3i = {21, 2, 3, 1, 7};			// {MATRIX, 2D, 3 rows, 1 cols, INT32}
+extern Vector4i = {21, 2, 4, 1, 7};			// {MATRIX, 2D, 4 rows, 1 cols, INT32}
+
+extern Vector2f = {21, 2, 2, 1, 9};			// {MATRIX, 2D, 2 rows, 1 cols, FLOAT}
+extern Vector3f = {21, 2, 3, 1, 9};			// {MATRIX, 2D, 3 rows, 1 cols, FLOAT}
+extern Vector4f = {21, 2, 4, 1, 9};			// {MATRIX, 2D, 4 rows, 1 cols, FLOAT}
+
+extern Matrix2f = {21, 2, 2, 2, 9};			// {MATRIX, 2D, 2 rows, 2 cols, FLOAT}
+extern Matrix3f = {21, 2, 3, 3, 9};			// {MATRIX, 2D, 3 rows, 3 cols, FLOAT}
+extern Matrix4f = {21, 2, 4, 4, 9};			// {MATRIX, 2D, 4 rows, 4 cols, FLOAT}
+
+extern Vector2d = {21, 2, 2, 1, 10};		// {MATRIX, 2D, 2 rows, 1 cols, DOUBLE}
+extern Vector3d = {21, 2, 3, 1, 10};		// {MATRIX, 2D, 3 rows, 1 cols, DOUBLE}
+extern Vector4d = {21, 2, 4, 1, 10};		// {MATRIX, 2D, 4 rows, 1 cols, DOUBLE}
+
+extern Matrix2d = {21, 2, 2, 2, 10};		// {MATRIX, 2D, 2 rows, 2 cols, DOUBLE}
+extern Matrix3d = {21, 2, 3, 3, 10};		// {MATRIX, 2D, 3 rows, 3 cols, DOUBLE}
+extern Matrix4d = {21, 2, 4, 4, 10};		// {MATRIX, 2D, 4 rows, 4 cols, DOUBLE}
+
+extern MatrixXf = {22, 2, 9};				// {IMAGE, 2D, FLOAT}
+extern MatrixXd = {22, 2, 10};				// {IMAGE, 2D, DOUBLE}

@@ -1,0 +1,7 @@
+Package: automy-math
+Section: base
+Priority: optional
+Depends:
+Maintainer: Max Wittal <automyinc@gmail.com>
+Description: Automy math package
+Architecture: all
