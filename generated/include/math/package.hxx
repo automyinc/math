@@ -146,6 +146,10 @@ struct type<::math::Matrix2d> {
 	void accept(Visitor& visitor, const ::math::Matrix2d& value) {
 		vnx::accept(visitor, value);
 	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 2, 2, 10};
+		code.insert(code.end(), tmp.begin(), tmp.end());
+	}
 };
 
 template<>
@@ -164,6 +168,10 @@ struct type<::math::Matrix2f> {
 	}
 	void accept(Visitor& visitor, const ::math::Matrix2f& value) {
 		vnx::accept(visitor, value);
+	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 2, 2, 9};
+		code.insert(code.end(), tmp.begin(), tmp.end());
 	}
 };
 
@@ -184,6 +192,10 @@ struct type<::math::Matrix3d> {
 	void accept(Visitor& visitor, const ::math::Matrix3d& value) {
 		vnx::accept(visitor, value);
 	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 3, 3, 10};
+		code.insert(code.end(), tmp.begin(), tmp.end());
+	}
 };
 
 template<>
@@ -202,6 +214,10 @@ struct type<::math::Matrix3f> {
 	}
 	void accept(Visitor& visitor, const ::math::Matrix3f& value) {
 		vnx::accept(visitor, value);
+	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 3, 3, 9};
+		code.insert(code.end(), tmp.begin(), tmp.end());
 	}
 };
 
@@ -222,6 +238,10 @@ struct type<::math::Matrix4d> {
 	void accept(Visitor& visitor, const ::math::Matrix4d& value) {
 		vnx::accept(visitor, value);
 	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 4, 4, 10};
+		code.insert(code.end(), tmp.begin(), tmp.end());
+	}
 };
 
 template<>
@@ -240,6 +260,10 @@ struct type<::math::Matrix4f> {
 	}
 	void accept(Visitor& visitor, const ::math::Matrix4f& value) {
 		vnx::accept(visitor, value);
+	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 4, 4, 9};
+		code.insert(code.end(), tmp.begin(), tmp.end());
 	}
 };
 
@@ -260,6 +284,10 @@ struct type<::math::MatrixXd> {
 	void accept(Visitor& visitor, const ::math::MatrixXd& value) {
 		vnx::accept(visitor, value);
 	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {22, 2, 10};
+		code.insert(code.end(), tmp.begin(), tmp.end());
+	}
 };
 
 template<>
@@ -278,6 +306,10 @@ struct type<::math::MatrixXf> {
 	}
 	void accept(Visitor& visitor, const ::math::MatrixXf& value) {
 		vnx::accept(visitor, value);
+	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {22, 2, 9};
+		code.insert(code.end(), tmp.begin(), tmp.end());
 	}
 };
 
@@ -298,6 +330,10 @@ struct type<::math::Vector2d> {
 	void accept(Visitor& visitor, const ::math::Vector2d& value) {
 		vnx::accept(visitor, value);
 	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 2, 1, 10};
+		code.insert(code.end(), tmp.begin(), tmp.end());
+	}
 };
 
 template<>
@@ -316,6 +352,10 @@ struct type<::math::Vector2f> {
 	}
 	void accept(Visitor& visitor, const ::math::Vector2f& value) {
 		vnx::accept(visitor, value);
+	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 2, 1, 9};
+		code.insert(code.end(), tmp.begin(), tmp.end());
 	}
 };
 
@@ -336,6 +376,10 @@ struct type<::math::Vector2i> {
 	void accept(Visitor& visitor, const ::math::Vector2i& value) {
 		vnx::accept(visitor, value);
 	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 2, 1, 7};
+		code.insert(code.end(), tmp.begin(), tmp.end());
+	}
 };
 
 template<>
@@ -354,6 +398,10 @@ struct type<::math::Vector3d> {
 	}
 	void accept(Visitor& visitor, const ::math::Vector3d& value) {
 		vnx::accept(visitor, value);
+	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 3, 1, 10};
+		code.insert(code.end(), tmp.begin(), tmp.end());
 	}
 };
 
@@ -374,6 +422,10 @@ struct type<::math::Vector3f> {
 	void accept(Visitor& visitor, const ::math::Vector3f& value) {
 		vnx::accept(visitor, value);
 	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 3, 1, 9};
+		code.insert(code.end(), tmp.begin(), tmp.end());
+	}
 };
 
 template<>
@@ -392,6 +444,10 @@ struct type<::math::Vector3i> {
 	}
 	void accept(Visitor& visitor, const ::math::Vector3i& value) {
 		vnx::accept(visitor, value);
+	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 3, 1, 7};
+		code.insert(code.end(), tmp.begin(), tmp.end());
 	}
 };
 
@@ -412,6 +468,10 @@ struct type<::math::Vector4d> {
 	void accept(Visitor& visitor, const ::math::Vector4d& value) {
 		vnx::accept(visitor, value);
 	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 4, 1, 10};
+		code.insert(code.end(), tmp.begin(), tmp.end());
+	}
 };
 
 template<>
@@ -430,6 +490,10 @@ struct type<::math::Vector4f> {
 	}
 	void accept(Visitor& visitor, const ::math::Vector4f& value) {
 		vnx::accept(visitor, value);
+	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 4, 1, 9};
+		code.insert(code.end(), tmp.begin(), tmp.end());
 	}
 };
 
@@ -450,6 +514,10 @@ struct type<::math::Vector4i> {
 	void accept(Visitor& visitor, const ::math::Vector4i& value) {
 		vnx::accept(visitor, value);
 	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 4, 1, 7};
+		code.insert(code.end(), tmp.begin(), tmp.end());
+	}
 };
 
 template<>
@@ -468,6 +536,10 @@ struct type<::math::Vector4uc> {
 	}
 	void accept(Visitor& visitor, const ::math::Vector4uc& value) {
 		vnx::accept(visitor, value);
+	}
+	void create_dynamic_code(std::vector<uint16_t>& code) {
+		const std::vector<int> tmp = {21, 2, 4, 1, 1};
+		code.insert(code.end(), tmp.begin(), tmp.end());
 	}
 };
 
