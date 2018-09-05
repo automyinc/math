@@ -307,10 +307,7 @@ public:
 	}
 	
 	void read(vnx::TypeInput& in, const vnx::TypeCode* type_code, const uint16_t* code) {
-		if(!code) {
-			throw std::logic_error("read(math::Matrix<T>): code == 0");
-		}
-		if(code[0] == vnx::CODE_MATRIX) {		// new format since vnx-1.2.0
+		if(code[0] == vnx::CODE_MATRIX || code[0] == vnx::CODE_ALT_MATRIX) {	// new format since vnx-1.2.0
 			vnx::read_matrix<T, 2>(in, data.data(), {Rows, Cols}, code);
 		} else if(code[0] == vnx::CODE_ARRAY) {		// old format
 			vnx::read(in, data, type_code, code);
@@ -321,9 +318,6 @@ public:
 	}
 	
 	void write(vnx::TypeOutput& out, const vnx::TypeCode* type_code, const uint16_t* code) const {
-		if(!type_code) {
-			throw std::logic_error("write(math::Matrix<T>): type_code == 0");	// only allowed inside another class
-		}
 		vnx::write_matrix<T, 2>(out, data.data(), {Rows, Cols}, code);
 	}
 	

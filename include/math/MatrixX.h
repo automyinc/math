@@ -293,24 +293,13 @@ public:
 	}
 	
 	void read(vnx::TypeInput& in, const vnx::TypeCode* type_code, const uint16_t* code) {
-		if(!code) {
-			throw std::logic_error("read(math::MatrixX<T>): code == 0");
-		}
-		if(code[0] == vnx::CODE_IMAGE) {
-			std::array<size_t, 2> size_;
-			vnx::read_image_size<2>(in, size_, code);
-			resize(size_[0], size_[1]);
-			vnx::read_image_data<T, 2>(in, data_, size_, code);
-		} else {
-			vnx::skip(in, type_code, code);
-			clear();
-		}
+		std::array<size_t, 2> size_;
+		vnx::read_image_size<2>(in, size_, code);
+		resize(size_[0], size_[1]);
+		vnx::read_image_data<T, 2>(in, data_, size_, code);
 	}
 	
 	void write(vnx::TypeOutput& out, const vnx::TypeCode* type_code, const uint16_t* code) const {
-		if(!type_code) {
-			throw std::logic_error("write(math::MatrixX<T>): type_code == 0");		// only allowed inside another class
-		}
 		vnx::write_image<T, 2>(out, data_, {rows_, cols_}, code);
 	}
 	
