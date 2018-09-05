@@ -60,14 +60,21 @@ public:
 	}
 	
 	void resize(size_t rows, size_t cols) {
-		if(rows * cols != size()) {
+		if(rows > 0xFFFFFFFF || cols > 0xFFFFFFFF) {
+			throw std::invalid_argument("rows or cols out of bounds");
+		}
+		const size_t new_size = rows * cols;
+		if(new_size != size()) {
 			if(data_) {
 				delete [] data_;
+				data_ = 0;
 			}
-			data_ = new T[rows * cols];
+			if(new_size > 0) {
+				data_ = new T[rows * cols];
+			}
 		}
-		rows_ = rows;
-		cols_ = cols;
+		rows_ = uint32_t(rows);
+		cols_ = uint32_t(cols);
 	}
 	
 	void clear() {
