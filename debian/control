@@ -1,7 +1,7 @@
 Package: automy-math
 Section: base
 Priority: optional
-Depends:
-Maintainer: Max Wittal <automyinc@gmail.com>
+Depends: vnx-base
+Maintainer: Max Wittal <max.wittal@automyinc.com>
 Description: Automy math package
 Architecture: all
