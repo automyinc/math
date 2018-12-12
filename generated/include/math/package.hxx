@@ -7,6 +7,7 @@
 #include <vnx/Type.h>
 
 
+
 namespace math {
 
 
@@ -34,101 +35,102 @@ class Vector4uc;
 
 namespace vnx {
 
-void read(TypeInput& in, ::math::Matrix2d& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Matrix2f& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Matrix3d& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Matrix3f& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Matrix4d& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Matrix4f& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::MatrixXd& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::MatrixXf& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector2d& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector2f& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector2i& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector3d& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector3f& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector3i& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector4d& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector4f& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector4i& value, const TypeCode* type_code, const uint16_t* code);
-void read(TypeInput& in, ::math::Vector4uc& value, const TypeCode* type_code, const uint16_t* code);
+void read(TypeInput& in, ::math::Matrix2d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Matrix2f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Matrix3d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Matrix3f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Matrix4d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Matrix4f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::MatrixXd& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::MatrixXf& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector2d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector2f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector2i& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector3d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector3f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector3i& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector4d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector4f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector4i& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void read(TypeInput& in, ::math::Vector4uc& value, const TypeCode* type_code, const uint16_t* code); ///< \private
 
-void write(TypeOutput& out, const ::math::Matrix2d& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Matrix2f& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Matrix3d& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Matrix3f& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Matrix4d& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Matrix4f& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::MatrixXd& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::MatrixXf& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector2d& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector2f& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector2i& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector3d& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector3f& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector3i& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector4d& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector4f& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector4i& value, const TypeCode* type_code, const uint16_t* code);
-void write(TypeOutput& out, const ::math::Vector4uc& value, const TypeCode* type_code, const uint16_t* code);
+void write(TypeOutput& out, const ::math::Matrix2d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Matrix2f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Matrix3d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Matrix3f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Matrix4d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Matrix4f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::MatrixXd& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::MatrixXf& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector2d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector2f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector2i& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector3d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector3f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector3i& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector4d& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector4f& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector4i& value, const TypeCode* type_code, const uint16_t* code); ///< \private
+void write(TypeOutput& out, const ::math::Vector4uc& value, const TypeCode* type_code, const uint16_t* code); ///< \private
 
-void read(std::istream& in, ::math::Matrix2d& value);
-void read(std::istream& in, ::math::Matrix2f& value);
-void read(std::istream& in, ::math::Matrix3d& value);
-void read(std::istream& in, ::math::Matrix3f& value);
-void read(std::istream& in, ::math::Matrix4d& value);
-void read(std::istream& in, ::math::Matrix4f& value);
-void read(std::istream& in, ::math::MatrixXd& value);
-void read(std::istream& in, ::math::MatrixXf& value);
-void read(std::istream& in, ::math::Vector2d& value);
-void read(std::istream& in, ::math::Vector2f& value);
-void read(std::istream& in, ::math::Vector2i& value);
-void read(std::istream& in, ::math::Vector3d& value);
-void read(std::istream& in, ::math::Vector3f& value);
-void read(std::istream& in, ::math::Vector3i& value);
-void read(std::istream& in, ::math::Vector4d& value);
-void read(std::istream& in, ::math::Vector4f& value);
-void read(std::istream& in, ::math::Vector4i& value);
-void read(std::istream& in, ::math::Vector4uc& value);
+void read(std::istream& in, ::math::Matrix2d& value); ///< \private
+void read(std::istream& in, ::math::Matrix2f& value); ///< \private
+void read(std::istream& in, ::math::Matrix3d& value); ///< \private
+void read(std::istream& in, ::math::Matrix3f& value); ///< \private
+void read(std::istream& in, ::math::Matrix4d& value); ///< \private
+void read(std::istream& in, ::math::Matrix4f& value); ///< \private
+void read(std::istream& in, ::math::MatrixXd& value); ///< \private
+void read(std::istream& in, ::math::MatrixXf& value); ///< \private
+void read(std::istream& in, ::math::Vector2d& value); ///< \private
+void read(std::istream& in, ::math::Vector2f& value); ///< \private
+void read(std::istream& in, ::math::Vector2i& value); ///< \private
+void read(std::istream& in, ::math::Vector3d& value); ///< \private
+void read(std::istream& in, ::math::Vector3f& value); ///< \private
+void read(std::istream& in, ::math::Vector3i& value); ///< \private
+void read(std::istream& in, ::math::Vector4d& value); ///< \private
+void read(std::istream& in, ::math::Vector4f& value); ///< \private
+void read(std::istream& in, ::math::Vector4i& value); ///< \private
+void read(std::istream& in, ::math::Vector4uc& value); ///< \private
 
-void write(std::ostream& out, const ::math::Matrix2d& value);
-void write(std::ostream& out, const ::math::Matrix2f& value);
-void write(std::ostream& out, const ::math::Matrix3d& value);
-void write(std::ostream& out, const ::math::Matrix3f& value);
-void write(std::ostream& out, const ::math::Matrix4d& value);
-void write(std::ostream& out, const ::math::Matrix4f& value);
-void write(std::ostream& out, const ::math::MatrixXd& value);
-void write(std::ostream& out, const ::math::MatrixXf& value);
-void write(std::ostream& out, const ::math::Vector2d& value);
-void write(std::ostream& out, const ::math::Vector2f& value);
-void write(std::ostream& out, const ::math::Vector2i& value);
-void write(std::ostream& out, const ::math::Vector3d& value);
-void write(std::ostream& out, const ::math::Vector3f& value);
-void write(std::ostream& out, const ::math::Vector3i& value);
-void write(std::ostream& out, const ::math::Vector4d& value);
-void write(std::ostream& out, const ::math::Vector4f& value);
-void write(std::ostream& out, const ::math::Vector4i& value);
-void write(std::ostream& out, const ::math::Vector4uc& value);
+void write(std::ostream& out, const ::math::Matrix2d& value); ///< \private
+void write(std::ostream& out, const ::math::Matrix2f& value); ///< \private
+void write(std::ostream& out, const ::math::Matrix3d& value); ///< \private
+void write(std::ostream& out, const ::math::Matrix3f& value); ///< \private
+void write(std::ostream& out, const ::math::Matrix4d& value); ///< \private
+void write(std::ostream& out, const ::math::Matrix4f& value); ///< \private
+void write(std::ostream& out, const ::math::MatrixXd& value); ///< \private
+void write(std::ostream& out, const ::math::MatrixXf& value); ///< \private
+void write(std::ostream& out, const ::math::Vector2d& value); ///< \private
+void write(std::ostream& out, const ::math::Vector2f& value); ///< \private
+void write(std::ostream& out, const ::math::Vector2i& value); ///< \private
+void write(std::ostream& out, const ::math::Vector3d& value); ///< \private
+void write(std::ostream& out, const ::math::Vector3f& value); ///< \private
+void write(std::ostream& out, const ::math::Vector3i& value); ///< \private
+void write(std::ostream& out, const ::math::Vector4d& value); ///< \private
+void write(std::ostream& out, const ::math::Vector4f& value); ///< \private
+void write(std::ostream& out, const ::math::Vector4i& value); ///< \private
+void write(std::ostream& out, const ::math::Vector4uc& value); ///< \private
 
-void accept(Visitor& visitor, const ::math::Matrix2d& value);
-void accept(Visitor& visitor, const ::math::Matrix2f& value);
-void accept(Visitor& visitor, const ::math::Matrix3d& value);
-void accept(Visitor& visitor, const ::math::Matrix3f& value);
-void accept(Visitor& visitor, const ::math::Matrix4d& value);
-void accept(Visitor& visitor, const ::math::Matrix4f& value);
-void accept(Visitor& visitor, const ::math::MatrixXd& value);
-void accept(Visitor& visitor, const ::math::MatrixXf& value);
-void accept(Visitor& visitor, const ::math::Vector2d& value);
-void accept(Visitor& visitor, const ::math::Vector2f& value);
-void accept(Visitor& visitor, const ::math::Vector2i& value);
-void accept(Visitor& visitor, const ::math::Vector3d& value);
-void accept(Visitor& visitor, const ::math::Vector3f& value);
-void accept(Visitor& visitor, const ::math::Vector3i& value);
-void accept(Visitor& visitor, const ::math::Vector4d& value);
-void accept(Visitor& visitor, const ::math::Vector4f& value);
-void accept(Visitor& visitor, const ::math::Vector4i& value);
-void accept(Visitor& visitor, const ::math::Vector4uc& value);
+void accept(Visitor& visitor, const ::math::Matrix2d& value); ///< \private
+void accept(Visitor& visitor, const ::math::Matrix2f& value); ///< \private
+void accept(Visitor& visitor, const ::math::Matrix3d& value); ///< \private
+void accept(Visitor& visitor, const ::math::Matrix3f& value); ///< \private
+void accept(Visitor& visitor, const ::math::Matrix4d& value); ///< \private
+void accept(Visitor& visitor, const ::math::Matrix4f& value); ///< \private
+void accept(Visitor& visitor, const ::math::MatrixXd& value); ///< \private
+void accept(Visitor& visitor, const ::math::MatrixXf& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector2d& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector2f& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector2i& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector3d& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector3f& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector3i& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector4d& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector4f& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector4i& value); ///< \private
+void accept(Visitor& visitor, const ::math::Vector4uc& value); ///< \private
 
+/// \private
 template<>
 struct type<::math::Matrix2d> {
 	void read(TypeInput& in, ::math::Matrix2d& value, const TypeCode* type_code, const uint16_t* code) {
@@ -152,6 +154,7 @@ struct type<::math::Matrix2d> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Matrix2f> {
 	void read(TypeInput& in, ::math::Matrix2f& value, const TypeCode* type_code, const uint16_t* code) {
@@ -175,6 +178,7 @@ struct type<::math::Matrix2f> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Matrix3d> {
 	void read(TypeInput& in, ::math::Matrix3d& value, const TypeCode* type_code, const uint16_t* code) {
@@ -198,6 +202,7 @@ struct type<::math::Matrix3d> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Matrix3f> {
 	void read(TypeInput& in, ::math::Matrix3f& value, const TypeCode* type_code, const uint16_t* code) {
@@ -221,6 +226,7 @@ struct type<::math::Matrix3f> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Matrix4d> {
 	void read(TypeInput& in, ::math::Matrix4d& value, const TypeCode* type_code, const uint16_t* code) {
@@ -244,6 +250,7 @@ struct type<::math::Matrix4d> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Matrix4f> {
 	void read(TypeInput& in, ::math::Matrix4f& value, const TypeCode* type_code, const uint16_t* code) {
@@ -267,6 +274,7 @@ struct type<::math::Matrix4f> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::MatrixXd> {
 	void read(TypeInput& in, ::math::MatrixXd& value, const TypeCode* type_code, const uint16_t* code) {
@@ -290,6 +298,7 @@ struct type<::math::MatrixXd> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::MatrixXf> {
 	void read(TypeInput& in, ::math::MatrixXf& value, const TypeCode* type_code, const uint16_t* code) {
@@ -313,6 +322,7 @@ struct type<::math::MatrixXf> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector2d> {
 	void read(TypeInput& in, ::math::Vector2d& value, const TypeCode* type_code, const uint16_t* code) {
@@ -336,6 +346,7 @@ struct type<::math::Vector2d> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector2f> {
 	void read(TypeInput& in, ::math::Vector2f& value, const TypeCode* type_code, const uint16_t* code) {
@@ -359,6 +370,7 @@ struct type<::math::Vector2f> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector2i> {
 	void read(TypeInput& in, ::math::Vector2i& value, const TypeCode* type_code, const uint16_t* code) {
@@ -382,6 +394,7 @@ struct type<::math::Vector2i> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector3d> {
 	void read(TypeInput& in, ::math::Vector3d& value, const TypeCode* type_code, const uint16_t* code) {
@@ -405,6 +418,7 @@ struct type<::math::Vector3d> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector3f> {
 	void read(TypeInput& in, ::math::Vector3f& value, const TypeCode* type_code, const uint16_t* code) {
@@ -428,6 +442,7 @@ struct type<::math::Vector3f> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector3i> {
 	void read(TypeInput& in, ::math::Vector3i& value, const TypeCode* type_code, const uint16_t* code) {
@@ -451,6 +466,7 @@ struct type<::math::Vector3i> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector4d> {
 	void read(TypeInput& in, ::math::Vector4d& value, const TypeCode* type_code, const uint16_t* code) {
@@ -474,6 +490,7 @@ struct type<::math::Vector4d> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector4f> {
 	void read(TypeInput& in, ::math::Vector4f& value, const TypeCode* type_code, const uint16_t* code) {
@@ -497,6 +514,7 @@ struct type<::math::Vector4f> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector4i> {
 	void read(TypeInput& in, ::math::Vector4i& value, const TypeCode* type_code, const uint16_t* code) {
@@ -520,6 +538,7 @@ struct type<::math::Vector4i> {
 	}
 };
 
+/// \private
 template<>
 struct type<::math::Vector4uc> {
 	void read(TypeInput& in, ::math::Vector4uc& value, const TypeCode* type_code, const uint16_t* code) {
