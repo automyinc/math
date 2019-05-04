@@ -1,4 +1,4 @@
-package math;
+package automy.math;
 
 extern Vector4uc = {21, 2, 4, 1, 1};		// {MATRIX, 2D, 4 rows, 1 cols, UINT8}
 

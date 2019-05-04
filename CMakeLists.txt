@@ -15,8 +15,8 @@ target_include_directories(automy_math PUBLIC include generated/include)
 
 target_link_libraries(automy_math vnx_base)
 
-install(DIRECTORY include/ DESTINATION include/automy)
-install(DIRECTORY generated/include/ DESTINATION include/automy)
+install(DIRECTORY include/ DESTINATION include)
+install(DIRECTORY generated/include/ DESTINATION include)
 install(DIRECTORY interface/ DESTINATION interface/automy/math)
 
 install(TARGETS automy_math DESTINATION lib)

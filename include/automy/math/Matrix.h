@@ -1,8 +1,8 @@
 
-#ifndef MATH_INCLUDE_MATRIX_H_
-#define MATH_INCLUDE_MATRIX_H_
+#ifndef AUTOMY_MATH_INCLUDE_MATRIX_H_
+#define AUTOMY_MATH_INCLUDE_MATRIX_H_
 
-#include <math/package.hxx>
+#include <automy/math/package.hxx>
 
 #include <vnx/Input.h>
 #include <vnx/Output.h>
@@ -16,6 +16,7 @@
 #include <initializer_list>
 
 
+namespace automy {
 namespace math {
 
 struct NO_INIT {};
@@ -440,5 +441,6 @@ Matrix<T, 4, 4> inverse(const Matrix<T, 4, 4>& m) {
 
 
 } // math
+} // automy
 
 #endif /* MATH_INCLUDE_MATRIX_H_ */

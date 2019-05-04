@@ -1,8 +1,8 @@
 
-#ifndef MATH_INCLUDE_MATH_MATRIXX_H_
-#define MATH_INCLUDE_MATH_MATRIXX_H_
+#ifndef INCLUDE_AUTOMY_MATH_MATRIXX_H_
+#define INCLUDE_AUTOMY_MATH_MATRIXX_H_
 
-#include <math/Matrix.h>
+#include <automy/math/Matrix.h>
 
 #include <vnx/Input.h>
 #include <vnx/Output.h>
@@ -14,6 +14,7 @@
 #include <ostream>
 
 
+namespace automy {
 namespace math {
 
 template<typename T>
@@ -319,5 +320,6 @@ private:
 
 
 } // math
+} // automy
 
 #endif /* MATH_INCLUDE_MATH_MATRIXX_H_ */

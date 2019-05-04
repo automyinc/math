@@ -1,6 +1,6 @@
 
 # Dependencies
-vnx-base
+vnx-base(>=1.5.0)
 
 # Install
 

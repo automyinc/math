@@ -1,10 +1,11 @@
 
-#ifndef MATH_INCLUDE_MATH_VECTOR2F_H_
-#define MATH_INCLUDE_MATH_VECTOR2F_H_
+#ifndef INCLUDE_AUTOMY_MATH_VECTOR2F_H_
+#define INCLUDE_AUTOMY_MATH_VECTOR2F_H_
 
 #include "Matrix.h"
 
 
+namespace automy {
 namespace math {
 
 class Vector2f : public Matrix<float, 2, 1> {
@@ -28,27 +29,28 @@ public:
 
 
 } // math
+} // automy
 
 
 namespace vnx {
 
-inline void read(TypeInput& in, ::math::Vector2f& value, const TypeCode* type_code, const uint16_t* code) {
+inline void read(TypeInput& in, ::automy::math::Vector2f& value, const TypeCode* type_code, const uint16_t* code) {
 	value.read(in, type_code, code);
 }
 
-inline void write(TypeOutput& out, const ::math::Vector2f& value, const TypeCode* type_code, const uint16_t* code) {
+inline void write(TypeOutput& out, const ::automy::math::Vector2f& value, const TypeCode* type_code, const uint16_t* code) {
 	value.write(out, type_code, code);
 }
 
-inline void read(std::istream& in, ::math::Vector2f& value) {
+inline void read(std::istream& in, ::automy::math::Vector2f& value) {
 	value.read(in);
 }
 
-inline void write(std::ostream& out, const ::math::Vector2f& value) {
+inline void write(std::ostream& out, const ::automy::math::Vector2f& value) {
 	value.write(out);
 }
 
-inline void accept(Visitor& visitor, const ::math::Vector2f& value) {
+inline void accept(Visitor& visitor, const ::automy::math::Vector2f& value) {
 	value.accept(visitor);
 }
 

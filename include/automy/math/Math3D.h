@@ -1,6 +1,6 @@
 
-#ifndef MATH_INCLUDE_MATH_MATH3D_H_
-#define MATH_INCLUDE_MATH_MATH3D_H_
+#ifndef INCLUDE_AUTOMY_MATH_MATH3D_H_
+#define INCLUDE_AUTOMY_MATH_MATH3D_H_
 
 #include "Util.h"
 #include "Matrix.h"
@@ -16,6 +16,7 @@
 #include <cmath>
 
 
+namespace automy {
 namespace math {
 
 template<typename T>
@@ -161,5 +162,6 @@ Matrix<T, 3, 1> matrix_to_euler_xyz(const Matrix<T, 3, 3>& matrix) {
 
 
 } // math
+} // automy
 
 #endif /* MATH_INCLUDE_MATH_MATH3D_H_ */

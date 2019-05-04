@@ -1,12 +1,13 @@
 
-#ifndef MATH_INCLUDE_MATH_UTIL_H_
-#define MATH_INCLUDE_MATH_UTIL_H_
+#ifndef INCLUDE_AUTOMY_MATH_UTIL_H_
+#define INCLUDE_AUTOMY_MATH_UTIL_H_
 
-#include <math/Matrix.h>
+#include <automy/math/Matrix.h>
 
 #include <cmath>
 
 
+namespace automy {
 namespace math {
 
 /*
@@ -27,5 +28,6 @@ Matrix<T,3,1> angle_diff(const Matrix<T,3,1>& a, const Matrix<T,3,1>& b) {
 
 
 } // math
+} // automy
 
 #endif /* MATH_INCLUDE_MATH_UTIL_H_ */

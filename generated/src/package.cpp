@@ -6,6 +6,7 @@
 
 
 
+namespace automy {
 namespace math {
 
 
@@ -18,4 +19,5 @@ static struct vnx_static_init {
 	}
 } vnx_static_init_;
 
+} // namespace automy
 } // namespace math

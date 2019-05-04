@@ -1,10 +1,11 @@
 
-#ifndef MATH_INCLUDE_MATH_MATRIXXD_H_
-#define MATH_INCLUDE_MATH_MATRIXXD_H_
+#ifndef INCLUDE_AUTOMY_MATH_MATRIXXD_H_
+#define INCLUDE_AUTOMY_MATH_MATRIXXD_H_
 
 #include "MatrixX.h"
 
 
+namespace automy {
 namespace math {
 
 class MatrixXd : public MatrixX<double> {
@@ -22,5 +23,6 @@ public:
 
 
 } // math
+} // automy
 
 #endif /* MATH_INCLUDE_MATH_MATRIXXD_H_ */
