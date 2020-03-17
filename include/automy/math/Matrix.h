@@ -70,7 +70,13 @@ public:
 			data[i] = mat.data[i];
 		}
 	}
-	
+
+	/*
+	 * Generic copy constructor for a MatrixX.
+	 */
+	template<typename S>
+	Matrix(const MatrixX<S>& mat);
+
 	/*
 	 * Initialize with column major list (ie. human readable form).
 	 */
@@ -144,7 +150,15 @@ public:
 	T norm() const {
 		return std::sqrt(squared_norm());
 	}
-	
+
+	size_t rows() const {
+		return Rows;
+	}
+
+	size_t cols() const {
+		return Cols;
+	}
+
 	size_t size() const {
 		return Rows * Cols;
 	}
@@ -272,8 +286,8 @@ public:
 	bool operator!=(const Matrix& B) const {
 		return data != B.data;
 	}
-	
-	std::ostream& print(std::ostream& out, const std::string& name) {
+
+	std::ostream& print(std::ostream& out, const std::string& name) const {
 		out << name << " = [" << std::endl;
 		for(size_t i = 0; i < Rows; ++i) {
 			if(i > 0) {

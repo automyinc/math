@@ -25,14 +25,7 @@ public:
 	MatrixX(size_t rows, size_t cols) {
 		resize(rows, cols);
 	}
-	
-	MatrixX(const MatrixX& B) {
-		resize(B.rows(), B.cols());
-		for(size_t i = 0; i < size(); ++i) {
-			data_[i] = B.data_[i];
-		}
-	}
-	
+
 	template<typename S>
 	MatrixX(const MatrixX<S>& B) {
 		resize(B.rows(), B.cols());
@@ -124,15 +117,7 @@ public:
 		}
 		return res;
 	}
-	
-	MatrixX<T>& operator=(const MatrixX& B) {
-		resize(B.rows(), B.cols());
-		for(size_t i = 0; i < size(); ++i) {
-			(*this)[i] = B[i];
-		}
-		return *this;
-	}
-	
+
 	template<typename S>
 	MatrixX<T>& operator=(const MatrixX<S>& B) {
 		resize(B.rows(), B.cols());
@@ -265,8 +250,8 @@ public:
 		}
 		return vec;
 	}
-	
-	std::ostream& print(std::ostream& out, const std::string& name) {
+
+	std::ostream& print(std::ostream& out, const std::string& name) const {
 		out << name << " = [" << std::endl;
 		for(size_t i = 0; i < rows_; ++i) {
 			if(i > 0) {
@@ -317,6 +302,18 @@ private:
 	uint32_t cols_ = 0;
 	
 };
+
+
+template<typename T, size_t Rows, size_t Cols>
+template<typename S>
+Matrix<T, Rows, Cols>::Matrix(const MatrixX<S>& mat) {
+	if(mat.rows() != Rows || mat.cols() != Cols) {
+		throw std::logic_error("matrix dimension mismatch");
+	}
+	for(size_t i = 0; i < size(); ++i) {
+		data[i] = mat[i];
+	}
+}
 
 
 } // math
