@@ -24,6 +24,9 @@ struct NO_INIT {};
 template<typename T, size_t Rows, size_t Cols>
 class Matrix;
 
+template<typename T>
+class MatrixX;
+
 template<typename T, size_t Rows, size_t Cols>
 std::ostream& operator<<(std::ostream& out, const Matrix<T, Rows, Cols>& value);
 
