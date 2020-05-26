@@ -310,13 +310,22 @@ public:
 	}
 	
 	void read(vnx::TypeInput& in, const vnx::TypeCode* type_code, const uint16_t* code) {
-		if(code[0] == vnx::CODE_MATRIX || code[0] == vnx::CODE_ALT_MATRIX) {	// new format since vnx-1.2.0
-			vnx::read_matrix<T, 2>(in, data.data(), {Rows, Cols}, code);
-		} else if(code[0] == vnx::CODE_ARRAY) {		// old format
-			vnx::read(in, data, type_code, code);
-		} else {
-			data = {};
-			vnx::skip(in, type_code, code);
+		switch(code[0]) {
+			case vnx::CODE_MATRIX:
+			case vnx::CODE_ALT_MATRIX:
+				// new format since vnx-1.2.0
+				vnx::read_matrix<T, 2>(in, data.data(), {Rows, Cols}, code);
+				break;
+			case vnx::CODE_ARRAY:
+			case vnx::CODE_ALT_ARRAY:
+			case vnx::CODE_LIST:
+			case vnx::CODE_ALT_LIST:
+				// alternate format
+				vnx::read(in, data, type_code, code);
+				break;
+			default:
+				data = {};
+				vnx::skip(in, type_code, code);
 		}
 	}
 	
