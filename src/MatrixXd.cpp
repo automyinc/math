@@ -1,9 +1,5 @@
 
-#include <automy/math/MatrixXd.h>
-
-#include <vnx/Input.h>
-#include <vnx/Output.h>
-#include <vnx/Visitor.h>
+#include <automy/math/MatrixXd.hpp>
 
 
 namespace vnx {

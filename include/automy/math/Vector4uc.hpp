@@ -1,8 +1,8 @@
 
-#ifndef INCLUDE_AUTOMY_MATH_VECTOR4UC_H_
-#define INCLUDE_AUTOMY_MATH_VECTOR4UC_H_
+#ifndef INCLUDE_AUTOMY_MATH_VECTOR4UC_HPP_
+#define INCLUDE_AUTOMY_MATH_VECTOR4UC_HPP_
 
-#include "Matrix.h"
+#include <automy/math/Matrix.hpp>
 
 
 namespace automy {
@@ -11,26 +11,26 @@ namespace math {
 class Vector4uc : public Matrix<uint8_t, 4, 1> {
 public:
 	Vector4uc() {}
-	
+
 	Vector4uc(const Matrix<uint8_t, 4, 1>& mat) : Matrix(mat) {}
-	
+
 	Vector4uc(uint8_t x, uint8_t y, uint8_t z, uint8_t w) {
 		data[0] = x;
 		data[1] = y;
 		data[2] = z;
 		data[3] = w;
 	}
-	
+
 	uint8_t& x() { return data[0]; }
 	uint8_t& y() { return data[1]; }
 	uint8_t& z() { return data[2]; }
 	uint8_t& w() { return data[3]; }
-	
+
 	const uint8_t& x() const { return data[0]; }
 	const uint8_t& y() const { return data[1]; }
 	const uint8_t& z() const { return data[2]; }
 	const uint8_t& w() const { return data[3]; }
-	
+
 };
 
 
@@ -63,4 +63,4 @@ inline void accept(Visitor& visitor, const ::automy::math::Vector4uc& value) {
 
 } // vnx
 
-#endif /* MATH_INCLUDE_MATH_VECTOR4UC_H_ */
+#endif /* INCLUDE_AUTOMY_MATH_VECTOR4UC_HPP_ */

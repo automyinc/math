@@ -2,16 +2,8 @@
 #ifndef INCLUDE_AUTOMY_MATH_MATH2D_H_
 #define INCLUDE_AUTOMY_MATH_MATH2D_H_
 
-#include "Util.h"
-#include "Matrix.h"
-#include "Vector2i.h"
-#include "Vector2f.h"
-#include "Vector2d.h"
-#include "Vector3i.h"
-#include "Vector3f.h"
-#include "Vector3d.h"
-#include "Matrix2d.h"
-#include "Matrix3d.h"
+#include <automy/math/Util.h>
+#include <automy/math/Matrix.hpp>
 
 #include <cmath>
 

@@ -1,8 +1,8 @@
 
-#ifndef INCLUDE_AUTOMY_MATH_MATRIX4F_H_
-#define INCLUDE_AUTOMY_MATH_MATRIX4F_H_
+#ifndef INCLUDE_AUTOMY_MATH_MATRIX4F_HPP_
+#define INCLUDE_AUTOMY_MATH_MATRIX4F_HPP_
 
-#include "Matrix.h"
+#include <automy/math/Matrix.hpp>
 
 
 namespace automy {
@@ -11,9 +11,9 @@ namespace math {
 class Matrix4f : public Matrix<float, 4, 4> {
 public:
 	Matrix4f() {}
-	
+
 	Matrix4f(const Matrix<float, 4, 4>& mat) : Matrix(mat) {}
-	
+
 };
 
 
@@ -46,4 +46,4 @@ inline void accept(Visitor& visitor, const ::automy::math::Matrix4f& value) {
 
 } // vnx
 
-#endif /* MATH_INCLUDE_MATH_MATRIX4F_H_ */
+#endif /* INCLUDE_AUTOMY_MATH_MATRIX4F_HPP_ */

@@ -1,8 +1,8 @@
 
-#ifndef INCLUDE_AUTOMY_MATH_MATRIX3D_H_
-#define INCLUDE_AUTOMY_MATH_MATRIX3D_H_
+#ifndef INCLUDE_AUTOMY_MATH_MATRIX3D_HPP_
+#define INCLUDE_AUTOMY_MATH_MATRIX3D_HPP_
 
-#include "Matrix.h"
+#include <automy/math/Matrix.hpp>
 
 
 namespace automy {
@@ -11,9 +11,9 @@ namespace math {
 class Matrix3d : public Matrix<double, 3, 3> {
 public:
 	Matrix3d() {}
-	
+
 	Matrix3d(const Matrix<double, 3, 3>& mat) : Matrix(mat) {}
-	
+
 };
 
 
@@ -46,4 +46,4 @@ inline void accept(Visitor& visitor, const ::automy::math::Matrix3d& value) {
 
 } // vnx
 
-#endif /* MATH_INCLUDE_MATH_MATRIX3D_H_ */
+#endif /* INCLUDE_AUTOMY_MATH_MATRIX3D_HPP_ */

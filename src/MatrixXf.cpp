@@ -1,9 +1,5 @@
 
-#include <automy/math/MatrixXf.h>
-
-#include <vnx/Input.h>
-#include <vnx/Output.h>
-#include <vnx/Visitor.h>
+#include <automy/math/MatrixXf.hpp>
 
 
 namespace vnx {

@@ -1,8 +1,8 @@
 
-#ifndef INCLUDE_AUTOMY_MATH_MATRIX2D_H_
-#define INCLUDE_AUTOMY_MATH_MATRIX2D_H_
+#ifndef INCLUDE_AUTOMY_MATH_MATRIX2D_HPP_
+#define INCLUDE_AUTOMY_MATH_MATRIX2D_HPP_
 
-#include "Matrix.h"
+#include <automy/math/Matrix.hpp>
 
 
 namespace automy {
@@ -11,9 +11,9 @@ namespace math {
 class Matrix2d : public Matrix<double, 2, 2> {
 public:
 	Matrix2d() {}
-	
+
 	Matrix2d(const Matrix<double, 2, 2>& mat) : Matrix(mat) {}
-	
+
 };
 
 
@@ -46,4 +46,4 @@ inline void accept(Visitor& visitor, const ::automy::math::Matrix2d& value) {
 
 } // vnx
 
-#endif /* MATH_INCLUDE_MATH_MATRIX2D_H_ */
+#endif /* INCLUDE_AUTOMY_MATH_MATRIX2D_HPP_ */

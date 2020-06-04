@@ -1,8 +1,14 @@
+/*
+ * Vector2f.hpp
+ *
+ *  Created on: Jun 4, 2020
+ *      Author: mad
+ */
 
-#ifndef INCLUDE_AUTOMY_MATH_VECTOR2F_H_
-#define INCLUDE_AUTOMY_MATH_VECTOR2F_H_
+#ifndef INCLUDE_AUTOMY_MATH_VECTOR2F_HPP_
+#define INCLUDE_AUTOMY_MATH_VECTOR2F_HPP_
 
-#include "Matrix.h"
+#include <automy/math/Matrix.hpp>
 
 
 namespace automy {
@@ -11,20 +17,20 @@ namespace math {
 class Vector2f : public Matrix<float, 2, 1> {
 public:
 	Vector2f() {}
-	
+
 	Vector2f(const Matrix<float, 2, 1>& mat) : Matrix(mat) {}
-	
+
 	Vector2f(float x, float y) {
 		data[0] = x;
 		data[1] = y;
 	}
-	
+
 	float& x() { return data[0]; }
 	float& y() { return data[1]; }
-	
+
 	const float& x() const { return data[0]; }
 	const float& y() const { return data[1]; }
-	
+
 };
 
 
@@ -57,4 +63,4 @@ inline void accept(Visitor& visitor, const ::automy::math::Vector2f& value) {
 
 } // vnx
 
-#endif /* MATH_INCLUDE_MATH_VECTOR2F_H_ */
+#endif /* INCLUDE_AUTOMY_MATH_VECTOR2F_HPP_ */

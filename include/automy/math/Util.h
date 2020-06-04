@@ -2,7 +2,7 @@
 #ifndef INCLUDE_AUTOMY_MATH_UTIL_H_
 #define INCLUDE_AUTOMY_MATH_UTIL_H_
 
-#include <automy/math/Matrix.h>
+#include <automy/math/Matrix.hpp>
 
 #include <cmath>
 

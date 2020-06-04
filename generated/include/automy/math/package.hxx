@@ -31,6 +31,7 @@ class Vector4f;
 class Vector4i;
 class Vector4uc;
 
+
 } // namespace automy
 } // namespace math
 

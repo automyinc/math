@@ -1,8 +1,8 @@
 
-#ifndef INCLUDE_AUTOMY_MATH_VECTOR2D_H_
-#define INCLUDE_AUTOMY_MATH_VECTOR2D_H_
+#ifndef INCLUDE_AUTOMY_MATH_VECTOR2D_HPP_
+#define INCLUDE_AUTOMY_MATH_VECTOR2D_HPP_
 
-#include "Matrix.h"
+#include <automy/math/Matrix.hpp>
 
 
 namespace automy {
@@ -11,20 +11,20 @@ namespace math {
 class Vector2d : public Matrix<double, 2, 1> {
 public:
 	Vector2d() {}
-	
+
 	Vector2d(const Matrix<double, 2, 1>& mat) : Matrix(mat) {}
-	
+
 	Vector2d(double x, double y) {
 		data[0] = x;
 		data[1] = y;
 	}
-	
+
 	double& x() { return data[0]; }
 	double& y() { return data[1]; }
-	
+
 	const double& x() const { return data[0]; }
 	const double& y() const { return data[1]; }
-	
+
 };
 
 
@@ -57,4 +57,4 @@ inline void accept(Visitor& visitor, const ::automy::math::Vector2d& value) {
 
 } // vnx
 
-#endif /* MATH_INCLUDE_MATH_VECTOR2D_H_ */
+#endif /* INCLUDE_AUTOMY_MATH_VECTOR2D_HPP_ */

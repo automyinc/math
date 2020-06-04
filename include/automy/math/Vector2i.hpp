@@ -1,8 +1,8 @@
 
-#ifndef INCLUDE_AUTOMY_MATH_VECTOR2I_H_
-#define INCLUDE_AUTOMY_MATH_VECTOR2I_H_
+#ifndef INCLUDE_AUTOMY_MATH_VECTOR2I_HPP_
+#define INCLUDE_AUTOMY_MATH_VECTOR2I_HPP_
 
-#include "Matrix.h"
+#include <automy/math/Matrix.hpp>
 
 
 namespace automy {
@@ -11,20 +11,20 @@ namespace math {
 class Vector2i : public Matrix<int32_t, 2, 1> {
 public:
 	Vector2i() {}
-	
+
 	Vector2i(const Matrix<int32_t, 2, 1>& mat) : Matrix(mat) {}
-	
+
 	Vector2i(int32_t x, int32_t y) {
 		data[0] = x;
 		data[1] = y;
 	}
-	
+
 	int32_t& x() { return data[0]; }
 	int32_t& y() { return data[1]; }
-	
+
 	const int32_t& x() const { return data[0]; }
 	const int32_t& y() const { return data[1]; }
-	
+
 };
 
 
@@ -57,4 +57,4 @@ inline void accept(Visitor& visitor, const ::automy::math::Vector2i& value) {
 
 } // vnx
 
-#endif /* MATH_INCLUDE_MATH_VECTOR2I_H_ */
+#endif /* INCLUDE_AUTOMY_MATH_VECTOR2I_HPP_ */
