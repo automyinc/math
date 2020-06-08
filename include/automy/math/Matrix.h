@@ -150,6 +150,14 @@ public:
 		return std::sqrt(squared_norm());
 	}
 
+	void normalize() {
+		(*this) *= (T(1) / norm());
+	}
+
+	Matrix normalized() const {
+		return (*this) * (T(1) / norm());
+	}
+
 	size_t rows() const {
 		return Rows;
 	}
