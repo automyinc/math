@@ -47,7 +47,7 @@ Matrix<T, 3, 3> scale2(T x, T y) {
  * Creates a 2D (x, y, yaw) transformation matrix.
  */
 template<typename T>
-Matrix<T, 4, 4> transform2(T x, T y, T rad) {
+Matrix<T, 3, 3> transform2(T x, T y, T rad) {
 	return translate2(x, y) * rotate2(rad);
 }
 
@@ -55,7 +55,7 @@ Matrix<T, 4, 4> transform2(T x, T y, T rad) {
  * Creates a 2D (x, y, yaw) transformation matrix.
  */
 template<typename T>
-Matrix<T, 4, 4> transform2(const Matrix<T, 3, 1>& pose) {
+Matrix<T, 3, 3> transform2(const Matrix<T, 3, 1>& pose) {
 	return translate2(pose[0], pose[1]) * rotate2(pose[2]);
 }
 

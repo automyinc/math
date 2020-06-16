@@ -15,7 +15,7 @@ namespace math {
  */
 template<typename T>
 T normalize_angle(T rad) {
-	T angle = std::modf(rad, T(2 * M_PI));
+	T angle = std::fmod(rad, T(2 * M_PI));
 	if(angle > M_PI) {
 		angle -= T(2 * M_PI);
 	} else if(angle < -M_PI) {
@@ -29,7 +29,7 @@ T normalize_angle(T rad) {
  */
 template<typename T>
 T normalize_angle_positive(T rad) {
-	T angle = std::modf(rad, T(2 * M_PI));
+	T angle = std::fmod(rad, T(2 * M_PI));
 	if(angle < 0) {
 		angle += T(2 * M_PI);
 	}
