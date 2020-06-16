@@ -10,9 +10,18 @@ namespace math {
 
 class Matrix3d : public Matrix<double, 3, 3> {
 public:
-	Matrix3d() {}
+	Matrix3d() = default;
 
-	Matrix3d(const Matrix<double, 3, 3>& mat) : Matrix(mat) {}
+	template<typename S>
+	Matrix3d(const Matrix<S, 3, 3>& mat) {
+		*this = mat;
+	}
+
+	template<typename S>
+	Matrix3d& operator=(const Matrix<S, 3, 3>& mat) {
+		Matrix<double, 3, 3>::operator=(mat);
+		return *this;
+	}
 
 };
 

@@ -10,23 +10,32 @@ namespace math {
 
 class Vector3d : public Matrix<double, 3, 1> {
 public:
-	Vector3d() {}
+	Vector3d() = default;
 
-	Vector3d(const Matrix<double, 3, 1>& mat) : Matrix(mat) {}
-
-	Vector3d(double x, double y, double z) {
-		data[0] = x;
-		data[1] = y;
-		data[2] = z;
+	template<typename S>
+	Vector3d(const Matrix<S, 3, 1>& mat) {
+		*this = mat;
 	}
 
-	double& x() { return data[0]; }
-	double& y() { return data[1]; }
-	double& z() { return data[2]; }
+	template<typename S>
+	Vector3d& operator=(const Matrix<S, 3, 1>& mat) {
+		Matrix<double, 3, 1>::operator=(mat);
+		return *this;
+	}
 
-	const double& x() const { return data[0]; }
-	const double& y() const { return data[1]; }
-	const double& z() const { return data[2]; }
+	Vector3d(double x, double y, double z) {
+		(*this)[0] = x;
+		(*this)[1] = y;
+		(*this)[2] = z;
+	}
+
+	double& x() { return (*this)[0]; }
+	double& y() { return (*this)[1]; }
+	double& z() { return (*this)[2]; }
+
+	const double& x() const { return (*this)[0]; }
+	const double& y() const { return (*this)[1]; }
+	const double& z() const { return (*this)[2]; }
 
 };
 

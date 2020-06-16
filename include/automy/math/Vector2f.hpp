@@ -16,20 +16,29 @@ namespace math {
 
 class Vector2f : public Matrix<float, 2, 1> {
 public:
-	Vector2f() {}
+	Vector2f() = default;
 
-	Vector2f(const Matrix<float, 2, 1>& mat) : Matrix(mat) {}
-
-	Vector2f(float x, float y) {
-		data[0] = x;
-		data[1] = y;
+	template<typename S>
+	Vector2f(const Matrix<S, 2, 1>& mat) {
+		*this = mat;
 	}
 
-	float& x() { return data[0]; }
-	float& y() { return data[1]; }
+	template<typename S>
+	Vector2f& operator=(const Matrix<S, 2, 1>& mat) {
+		Matrix<float, 2, 1>::operator=(mat);
+		return *this;
+	}
 
-	const float& x() const { return data[0]; }
-	const float& y() const { return data[1]; }
+	Vector2f(float x, float y) {
+		(*this)[0] = x;
+		(*this)[1] = y;
+	}
+
+	float& x() { return (*this)[0]; }
+	float& y() { return (*this)[1]; }
+
+	const float& x() const { return (*this)[0]; }
+	const float& y() const { return (*this)[1]; }
 
 };
 

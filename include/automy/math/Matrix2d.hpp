@@ -10,9 +10,18 @@ namespace math {
 
 class Matrix2d : public Matrix<double, 2, 2> {
 public:
-	Matrix2d() {}
+	Matrix2d() = default;
 
-	Matrix2d(const Matrix<double, 2, 2>& mat) : Matrix(mat) {}
+	template<typename S>
+	Matrix2d(const Matrix<S, 2, 2>& mat) {
+		*this = mat;
+	}
+
+	template<typename S>
+	Matrix2d& operator=(const Matrix<S, 2, 2>& mat) {
+		Matrix<double, 2, 2>::operator=(mat);
+		return *this;
+	}
 
 };
 

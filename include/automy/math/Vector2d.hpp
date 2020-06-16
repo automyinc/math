@@ -10,20 +10,29 @@ namespace math {
 
 class Vector2d : public Matrix<double, 2, 1> {
 public:
-	Vector2d() {}
+	Vector2d() = default;
 
-	Vector2d(const Matrix<double, 2, 1>& mat) : Matrix(mat) {}
-
-	Vector2d(double x, double y) {
-		data[0] = x;
-		data[1] = y;
+	template<typename S>
+	Vector2d(const Matrix<S, 2, 1>& mat) {
+		*this = mat;
 	}
 
-	double& x() { return data[0]; }
-	double& y() { return data[1]; }
+	template<typename S>
+	Vector2d& operator=(const Matrix<S, 2, 1>& mat) {
+		Matrix<double, 2, 1>::operator=(mat);
+		return *this;
+	}
 
-	const double& x() const { return data[0]; }
-	const double& y() const { return data[1]; }
+	Vector2d(double x, double y) {
+		(*this)[0] = x;
+		(*this)[1] = y;
+	}
+
+	double& x() { return (*this)[0]; }
+	double& y() { return (*this)[1]; }
+
+	const double& x() const { return (*this)[0]; }
+	const double& y() const { return (*this)[1]; }
 
 };
 

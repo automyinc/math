@@ -10,26 +10,35 @@ namespace math {
 
 class Vector4f : public Matrix<float, 4, 1> {
 public:
-	Vector4f() {}
+	Vector4f() = default;
 
-	Vector4f(const Matrix<float, 4, 1>& mat) : Matrix(mat) {}
-
-	Vector4f(float x, float y, float z, float w) {
-		data[0] = x;
-		data[1] = y;
-		data[2] = z;
-		data[3] = w;
+	template<typename S>
+	Vector4f(const Matrix<S, 4, 1>& mat) {
+		*this = mat;
 	}
 
-	float& x() { return data[0]; }
-	float& y() { return data[1]; }
-	float& z() { return data[2]; }
-	float& w() { return data[3]; }
+	template<typename S>
+	Vector4f& operator=(const Matrix<S, 4, 1>& mat) {
+		Matrix<float, 4, 1>::operator=(mat);
+		return *this;
+	}
 
-	const float& x() const { return data[0]; }
-	const float& y() const { return data[1]; }
-	const float& z() const { return data[2]; }
-	const float& w() const { return data[3]; }
+	Vector4f(float x, float y, float z, float w) {
+		(*this)[0] = x;
+		(*this)[1] = y;
+		(*this)[2] = z;
+		(*this)[3] = w;
+	}
+
+	float& x() { return (*this)[0]; }
+	float& y() { return (*this)[1]; }
+	float& z() { return (*this)[2]; }
+	float& w() { return (*this)[3]; }
+
+	const float& x() const { return (*this)[0]; }
+	const float& y() const { return (*this)[1]; }
+	const float& z() const { return (*this)[2]; }
+	const float& w() const { return (*this)[3]; }
 
 };
 

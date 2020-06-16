@@ -10,26 +10,35 @@ namespace math {
 
 class Vector4d : public Matrix<double, 4, 1> {
 public:
-	Vector4d() {}
+	Vector4d() = default;
 
-	Vector4d(const Matrix<double, 4, 1>& mat) : Matrix(mat) {}
-
-	Vector4d(double x, double y, double z, double w) {
-		data[0] = x;
-		data[1] = y;
-		data[2] = z;
-		data[3] = w;
+	template<typename S>
+	Vector4d(const Matrix<S, 4, 1>& mat) {
+		*this = mat;
 	}
 
-	double& x() { return data[0]; }
-	double& y() { return data[1]; }
-	double& z() { return data[2]; }
-	double& w() { return data[3]; }
+	template<typename S>
+	Vector4d& operator=(const Matrix<S, 4, 1>& mat) {
+		Matrix<double, 4, 1>::operator=(mat);
+		return *this;
+	}
 
-	const double& x() const { return data[0]; }
-	const double& y() const { return data[1]; }
-	const double& z() const { return data[2]; }
-	const double& w() const { return data[3]; }
+	Vector4d(double x, double y, double z, double w) {
+		(*this)[0] = x;
+		(*this)[1] = y;
+		(*this)[2] = z;
+		(*this)[3] = w;
+	}
+
+	double& x() { return (*this)[0]; }
+	double& y() { return (*this)[1]; }
+	double& z() { return (*this)[2]; }
+	double& w() { return (*this)[3]; }
+
+	const double& x() const { return (*this)[0]; }
+	const double& y() const { return (*this)[1]; }
+	const double& z() const { return (*this)[2]; }
+	const double& w() const { return (*this)[3]; }
 
 };
 

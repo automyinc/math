@@ -10,26 +10,35 @@ namespace math {
 
 class Vector4uc : public Matrix<uint8_t, 4, 1> {
 public:
-	Vector4uc() {}
+	Vector4uc() = default;
 
-	Vector4uc(const Matrix<uint8_t, 4, 1>& mat) : Matrix(mat) {}
-
-	Vector4uc(uint8_t x, uint8_t y, uint8_t z, uint8_t w) {
-		data[0] = x;
-		data[1] = y;
-		data[2] = z;
-		data[3] = w;
+	template<typename S>
+	Vector4uc(const Matrix<S, 4, 1>& mat) {
+		*this = mat;
 	}
 
-	uint8_t& x() { return data[0]; }
-	uint8_t& y() { return data[1]; }
-	uint8_t& z() { return data[2]; }
-	uint8_t& w() { return data[3]; }
+	template<typename S>
+	Vector4uc& operator=(const Matrix<S, 4, 1>& mat) {
+		Matrix<uint8_t, 4, 1>::operator=(mat);
+		return *this;
+	}
 
-	const uint8_t& x() const { return data[0]; }
-	const uint8_t& y() const { return data[1]; }
-	const uint8_t& z() const { return data[2]; }
-	const uint8_t& w() const { return data[3]; }
+	Vector4uc(uint8_t x, uint8_t y, uint8_t z, uint8_t w) {
+		(*this)[0] = x;
+		(*this)[1] = y;
+		(*this)[2] = z;
+		(*this)[3] = w;
+	}
+
+	uint8_t& x() { return (*this)[0]; }
+	uint8_t& y() { return (*this)[1]; }
+	uint8_t& z() { return (*this)[2]; }
+	uint8_t& w() { return (*this)[3]; }
+
+	const uint8_t& x() const { return (*this)[0]; }
+	const uint8_t& y() const { return (*this)[1]; }
+	const uint8_t& z() const { return (*this)[2]; }
+	const uint8_t& w() const { return (*this)[3]; }
 
 };
 

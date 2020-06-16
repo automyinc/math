@@ -10,14 +10,18 @@ namespace math {
 
 class MatrixXd : public MatrixX<double> {
 public:
-	MatrixXd() {}
+	MatrixXd() = default;
 
 	MatrixXd(size_t rows, size_t cols) : MatrixX<double>(rows, cols) {}
 
-	MatrixXd(const MatrixXd& B) : MatrixX<double>(B) {}
-
 	template<typename S>
 	MatrixXd(const MatrixX<S>& B) : MatrixX<double>(B) {}
+
+	template<typename S>
+	MatrixXd& operator=(const MatrixX<S>& B) {
+		MatrixX<double>::operator=(B);
+		return this;
+	}
 
 };
 

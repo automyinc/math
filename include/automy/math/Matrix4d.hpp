@@ -10,9 +10,18 @@ namespace math {
 
 class Matrix4d : public Matrix<double, 4, 4> {
 public:
-	Matrix4d() {}
+	Matrix4d() = default;
 
-	Matrix4d(const Matrix<double, 4, 4>& mat) : Matrix(mat) {}
+	template<typename S>
+	Matrix4d(const Matrix<S, 4, 4>& mat) {
+		*this = mat;
+	}
+
+	template<typename S>
+	Matrix4d& operator=(const Matrix<S, 4, 4>& mat) {
+		Matrix<double, 4, 4>::operator=(mat);
+		return *this;
+	}
 
 };
 

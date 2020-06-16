@@ -10,14 +10,18 @@ namespace math {
 
 class MatrixXf : public MatrixX<float> {
 public:
-	MatrixXf() {}
+	MatrixXf() = default;
 
 	MatrixXf(size_t rows, size_t cols) : MatrixX<float>(rows, cols) {}
 
-	MatrixXf(const MatrixXf& B) : MatrixX<float>(B) {}
-
 	template<typename S>
 	MatrixXf(const MatrixX<S>& B) : MatrixX<float>(B) {}
+
+	template<typename S>
+	MatrixXf& operator=(const MatrixX<S>& B) {
+		MatrixX<float>::operator=(B);
+		return this;
+	}
 
 };
 
