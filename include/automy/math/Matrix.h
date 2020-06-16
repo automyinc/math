@@ -65,9 +65,7 @@ public:
 	 */
 	template<typename S>
 	Matrix(const Matrix<S, Rows, Cols>& mat) {
-		for(size_t i = 0; i < size(); ++i) {
-			data[i] = mat.data[i];
-		}
+		*this = mat;
 	}
 
 	/*
@@ -128,6 +126,16 @@ public:
 		return data[i];
 	}
 	
+	Matrix& operator=(const Matrix&) = default;
+
+	template<typename S>
+	Matrix& operator=(const Matrix<S, Rows, Cols>& mat) {
+		for(size_t i = 0; i < size(); ++i) {
+			data[i] = mat[i];
+		}
+		return *this;
+	}
+
 	Matrix<T, Cols, Rows> transpose() const {
 		Matrix<T, Cols, Rows> res;
 		for(size_t j = 0; j < Cols; ++j) {
@@ -294,6 +302,10 @@ public:
 		return data != B.data;
 	}
 
+	friend Matrix operator*(const T& value, const Matrix& A) {
+		return A * value;
+	}
+
 	std::ostream& print(std::ostream& out, const std::string& name) const;
 	
 	void read(vnx::TypeInput& in, const vnx::TypeCode* type_code, const uint16_t* code);
@@ -306,6 +318,7 @@ public:
 	
 	void accept(vnx::Visitor& visitor) const;
 	
+private:
 	std::array<T, Rows * Cols> data;
 	
 };

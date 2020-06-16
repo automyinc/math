@@ -23,10 +23,7 @@ public:
 
 	template<typename S>
 	MatrixX(const MatrixX<S>& B) {
-		resize(B.rows(), B.cols());
-		for(size_t i = 0; i < size(); ++i) {
-			data_[i] = B[i];
-		}
+		*this = B;
 	}
 	
 	~MatrixX() {
@@ -92,7 +89,7 @@ public:
 	const T& operator[](size_t i) const {
 		return data_[i];
 	}
-	
+
 	MatrixX<T> get(size_t N, size_t M, size_t i_0 = 0, size_t j_0 = 0) const {
 		MatrixX<T> res(N, M);
 		for(size_t j = 0; j < M; ++j) {
@@ -205,6 +202,10 @@ public:
 		return !(*this == B);
 	}
 	
+	friend MatrixX operator*(const T& value, const MatrixX& A) {
+		return A * value;
+	}
+
 	T square_norm() const {
 		T res = 0;
 		for(size_t i = 0; i < size(); ++i) {
