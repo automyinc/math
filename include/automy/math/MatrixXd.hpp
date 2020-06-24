@@ -20,7 +20,7 @@ public:
 	template<typename S>
 	MatrixXd& operator=(const MatrixX<S>& B) {
 		MatrixX<double>::operator=(B);
-		return this;
+		return *this;
 	}
 
 };
