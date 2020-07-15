@@ -75,13 +75,13 @@ void Matrix<T, Rows, Cols>::accept(vnx::Visitor& visitor) const {
 
 template<typename T, size_t Rows, size_t Cols>
 std::ostream& operator<<(std::ostream& out, const Matrix<T, Rows, Cols>& value) {
-	vnx::write(out, value.data);
+	vnx::write(out, value.get_array());
 	return out;
 }
 
 template<typename T, size_t Rows, size_t Cols>
 std::istream& operator>>(std::istream& in, Matrix<T, Rows, Cols>& value) {
-	vnx::read(in, value.data);
+	vnx::read(in, value.get_array());
 	return in;
 }
 

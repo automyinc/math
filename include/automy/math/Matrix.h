@@ -110,6 +110,10 @@ public:
 		return &data[0];
 	}
 	
+	const std::array<T, Rows * Cols>& get_array() const {
+		return data;
+	}
+
 	T& operator()(size_t i, size_t j) {
 		return data[j * Rows + i];
 	}
