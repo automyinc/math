@@ -47,6 +47,13 @@ void Matrix<T, Rows, Cols>::read(vnx::TypeInput& in, const vnx::TypeCode* type_c
 			// alternate format
 			vnx::read(in, data, type_code, code);
 			break;
+		case vnx::CODE_DYNAMIC:
+		case vnx::CODE_ALT_DYNAMIC: {
+			uint16_t dyn_code[VNX_MAX_BYTE_CODE_SIZE];
+			vnx::read_byte_code(in, dyn_code);
+			Matrix<T, Rows, Cols>::read(in, type_code, dyn_code);
+			break;
+		}
 		default:
 			data = {};
 			vnx::skip(in, type_code, code);
