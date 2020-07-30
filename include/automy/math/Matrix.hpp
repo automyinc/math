@@ -47,6 +47,20 @@ void Matrix<T, Rows, Cols>::read(vnx::TypeInput& in, const vnx::TypeCode* type_c
 			// alternate format
 			vnx::read(in, data, type_code, code);
 			break;
+		case vnx::CODE_OBJECT:
+		case vnx::CODE_ALT_OBJECT: {
+			// JSON format
+			vnx::Object object;
+			vnx::read(in, object, type_code, code);
+			std::array<size_t, 2> size;
+			object["size"].to(size);
+			if(size[0] == Rows && size[1] == Cols) {
+				object["data"].to(data);
+			} else {
+				data = {};
+			}
+			break;
+		}
 		case vnx::CODE_DYNAMIC:
 		case vnx::CODE_ALT_DYNAMIC: {
 			uint16_t dyn_code[VNX_MAX_BYTE_CODE_SIZE];

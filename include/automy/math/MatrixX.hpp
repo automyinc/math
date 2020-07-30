@@ -46,10 +46,45 @@ std::ostream& MatrixX<T>::print(std::ostream& out, const std::string& name) cons
 
 template<typename T>
 void MatrixX<T>::read(vnx::TypeInput& in, const vnx::TypeCode* type_code, const uint16_t* code) {
-	std::array<size_t, 2> size_;
-	vnx::read_image_size<2>(in, size_, code);
-	resize(size_[0], size_[1]);
-	vnx::read_image_data<T, 2>(in, data_, size_, code);
+	switch(code[0]) {
+		case vnx::CODE_IMAGE:
+		case vnx::CODE_ALT_IMAGE: {
+			std::array<size_t, 2> size_;
+			vnx::read_image_size<2>(in, size_, code);
+			resize(size_[0], size_[1]);
+			vnx::read_image_data<T, 2>(in, data_, size_, code);
+			break;
+		}
+		case vnx::CODE_OBJECT:
+		case vnx::CODE_ALT_OBJECT: {
+			// JSON format
+			vnx::Object object;
+			vnx::read(in, object, type_code, code);
+			std::array<size_t, 2> size_;
+			object["size"].to(size_);
+			resize(size_[0], size_[1]);
+			std::vector<T> data;
+			object["data"].to(data);
+			if(data.size() == size()) {
+				for(size_t i = 0; i < data.size(); ++i) {
+					data_[i] = data[i];
+				}
+			} else {
+				clear();
+			}
+			break;
+		}
+		case vnx::CODE_DYNAMIC:
+		case vnx::CODE_ALT_DYNAMIC: {
+			uint16_t dyn_code[VNX_MAX_BYTE_CODE_SIZE];
+			vnx::read_byte_code(in, dyn_code);
+			MatrixX<T>::read(in, type_code, dyn_code);
+			break;
+		}
+		default:
+			clear();
+			vnx::skip(in, type_code, code);
+	}
 }
 
 template<typename T>
