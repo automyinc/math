@@ -7,6 +7,7 @@
 #include <vnx/Visitor.h>
 #include <vnx/Input.hpp>
 #include <vnx/Output.hpp>
+#include <vnx/Object.hpp>
 #include <vnx/DefaultPrinter.h>
 
 
