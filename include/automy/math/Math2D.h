@@ -83,6 +83,14 @@ Matrix<T, 4, 4> translate25(T x, T y) {
 }
 
 /*
+ * Creates a 2.5D (x, y, yaw) translation matrix.
+ */
+template<typename T>
+Matrix<T, 4, 4> translate25(const Matrix<T, 2, 1>& offset) {
+	return translate25(offset[0], offset[1]);
+}
+
+/*
  * Creates a 2.5D (x, y, yaw) transformation matrix.
  */
 template<typename T>

@@ -200,6 +200,15 @@ public:
 		return res;
 	}
 	
+	template<size_t N, size_t M = 1>
+	void set(const Matrix<T, N, M>& mat, size_t i_0 = 0, size_t j_0 = 0) {
+		for(size_t j = 0; j < M; ++j) {
+			for(size_t i = 0; i < N; ++i) {
+				(*this)(i + i_0, j + j_0) = mat(i, j);
+			}
+		}
+	}
+
 	Matrix<T, Rows+1, 1> extend() const {
 		if(Cols != 1) {
 			throw std::logic_error("Cols != 1");
