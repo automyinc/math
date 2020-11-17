@@ -10,6 +10,7 @@ extern Vector2f = {21, 2, 2, 1, 9};			// {MATRIX, 2D, 2 rows, 1 cols, FLOAT}
 extern Vector3f = {21, 2, 3, 1, 9};			// {MATRIX, 2D, 3 rows, 1 cols, FLOAT}
 extern Vector4f = {21, 2, 4, 1, 9};			// {MATRIX, 2D, 4 rows, 1 cols, FLOAT}
 
+extern Matrix3f = {21, 2, 3, 3, 9};			// {MATRIX, 2D, 3 rows, 3 cols, FLOAT}
 extern Matrix4f = {21, 2, 4, 4, 9};			// {MATRIX, 2D, 4 rows, 4 cols, FLOAT}
 
 extern Vector2d = {21, 2, 2, 1, 10};		// {MATRIX, 2D, 2 rows, 1 cols, DOUBLE}

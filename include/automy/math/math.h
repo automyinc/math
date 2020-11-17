@@ -18,6 +18,7 @@
 #include <automy/math/Matrix2d.hpp>
 #include <automy/math/Matrix3d.hpp>
 #include <automy/math/Matrix4d.hpp>
+#include <automy/math/Matrix3f.hpp>
 #include <automy/math/Matrix4f.hpp>
 
 #include <automy/math/Vector2d.hpp>
