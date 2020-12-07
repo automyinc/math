@@ -37,7 +37,15 @@ T normalize_angle_positive(T rad) {
 }
 
 /*
- * Computes angle difference as a - b in radians.
+ * Returns 2.5D pose with normalized yaw angle in radians between +pi and -pi.
+ */
+template<typename T>
+Matrix<T, 3, 1> normalize_pose_25(const Matrix<T, 3, 1>& pose) {
+	return {pose[0], pose[1], normalize_angle(pose[2])};
+}
+
+/*
+ * Computes angle difference as a - b in radians (normalized between +pi and -pi).
  */
 template<typename T>
 T angle_diff(T a, T b) {
@@ -45,7 +53,7 @@ T angle_diff(T a, T b) {
 }
 
 /*
- * Computes 3D angle difference as a - b in radians.
+ * Computes 3D angle difference as a - b in radians (normalized between +pi and -pi).
  */
 template<typename T>
 Matrix<T, 3, 1> angle_diff(const Matrix<T, 3, 1>& a, const Matrix<T, 3, 1>& b) {
