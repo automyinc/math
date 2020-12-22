@@ -189,9 +189,9 @@ public:
 		return math::inverse<T>(*this);
 	}
 	
-	template<size_t N, size_t M = 1>
-	Matrix<T, N, M> get(size_t i_0 = 0, size_t j_0 = 0) const {
-		Matrix<T, N, M> res;
+	template<size_t N, size_t M = 1, typename S = T>
+	Matrix<S, N, M> get(size_t i_0 = 0, size_t j_0 = 0) const {
+		Matrix<S, N, M> res;
 		for(size_t j = 0; j < M; ++j) {
 			for(size_t i = 0; i < N; ++i) {
 				res(i, j) = (*this)(i + i_0, j + j_0);
@@ -200,8 +200,8 @@ public:
 		return res;
 	}
 	
-	template<size_t N, size_t M = 1>
-	void set(const Matrix<T, N, M>& mat, size_t i_0 = 0, size_t j_0 = 0) {
+	template<size_t N, size_t M = 1, typename S = T>
+	void set(const Matrix<S, N, M>& mat, size_t i_0 = 0, size_t j_0 = 0) {
 		for(size_t j = 0; j < M; ++j) {
 			for(size_t i = 0; i < N; ++i) {
 				(*this)(i + i_0, j + j_0) = mat(i, j);
