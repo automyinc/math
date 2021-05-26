@@ -146,10 +146,7 @@ struct type<::automy::math::Matrix2d> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix2d& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 2, 2, 10};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix2d& value, bool special = false);
 };
 
 /// \private
@@ -171,10 +168,7 @@ struct type<::automy::math::Matrix3d> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix3d& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 3, 3, 10};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix3d& value, bool special = false);
 };
 
 /// \private
@@ -196,10 +190,7 @@ struct type<::automy::math::Matrix3f> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix3f& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 3, 3, 9};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix3f& value, bool special = false);
 };
 
 /// \private
@@ -221,10 +212,7 @@ struct type<::automy::math::Matrix4d> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix4d& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 4, 4, 10};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix4d& value, bool special = false);
 };
 
 /// \private
@@ -246,10 +234,7 @@ struct type<::automy::math::Matrix4f> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix4f& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 4, 4, 9};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix4f& value, bool special = false);
 };
 
 /// \private
@@ -271,10 +256,7 @@ struct type<::automy::math::MatrixXd> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::MatrixXd& value, bool special = false) {
-		const std::vector<int> tmp = {22, 2, 10};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::MatrixXd& value, bool special = false);
 };
 
 /// \private
@@ -296,10 +278,7 @@ struct type<::automy::math::MatrixXf> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::MatrixXf& value, bool special = false) {
-		const std::vector<int> tmp = {22, 2, 9};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::MatrixXf& value, bool special = false);
 };
 
 /// \private
@@ -321,10 +300,7 @@ struct type<::automy::math::Vector2d> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2d& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 2, 1, 10};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2d& value, bool special = false);
 };
 
 /// \private
@@ -346,10 +322,7 @@ struct type<::automy::math::Vector2f> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2f& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 2, 1, 9};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2f& value, bool special = false);
 };
 
 /// \private
@@ -371,10 +344,7 @@ struct type<::automy::math::Vector2i> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2i& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 2, 1, 7};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2i& value, bool special = false);
 };
 
 /// \private
@@ -396,10 +366,7 @@ struct type<::automy::math::Vector3d> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3d& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 3, 1, 10};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3d& value, bool special = false);
 };
 
 /// \private
@@ -421,10 +388,7 @@ struct type<::automy::math::Vector3f> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3f& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 3, 1, 9};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3f& value, bool special = false);
 };
 
 /// \private
@@ -446,10 +410,7 @@ struct type<::automy::math::Vector3i> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3i& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 3, 1, 7};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3i& value, bool special = false);
 };
 
 /// \private
@@ -471,10 +432,7 @@ struct type<::automy::math::Vector4d> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4d& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 4, 1, 10};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4d& value, bool special = false);
 };
 
 /// \private
@@ -496,10 +454,7 @@ struct type<::automy::math::Vector4f> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4f& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 4, 1, 9};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4f& value, bool special = false);
 };
 
 /// \private
@@ -521,10 +476,7 @@ struct type<::automy::math::Vector4i> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4i& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 4, 1, 7};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4i& value, bool special = false);
 };
 
 /// \private
@@ -546,10 +498,7 @@ struct type<::automy::math::Vector4uc> {
 		vnx::accept(visitor, value);
 	}
 	void create_dynamic_code(std::vector<uint16_t>& code);
-	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4uc& value, bool special = false) {
-		const std::vector<int> tmp = {21, 2, 4, 1, 1};
-		code.insert(code.end(), tmp.begin(), tmp.end());
-	}
+	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4uc& value, bool special = false);
 };
 
 
