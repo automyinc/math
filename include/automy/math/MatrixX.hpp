@@ -50,10 +50,14 @@ void MatrixX<T>::read(vnx::TypeInput& in, const vnx::TypeCode* type_code, const 
 	switch(code[0]) {
 		case vnx::CODE_IMAGE:
 		case vnx::CODE_ALT_IMAGE: {
-			std::array<size_t, 2> size_;
-			vnx::read_image_size<2>(in, size_, code);
-			resize(size_[0], size_[1]);
-			vnx::read_image_data<T, 2>(in, data_, size_, code);
+			std::vector<size_t> size_;
+			vnx::read_image_size(in, size_, code);
+			if(size_.size() == 2) {
+				resize(size_[0], size_[1]);
+				vnx::read_image_data<T>(in, data_, size_, code);
+			} else {
+				vnx::read_image_data<T>(in, nullptr, size_, code);
+			}
 			break;
 		}
 		case vnx::CODE_OBJECT:
@@ -95,10 +99,7 @@ void MatrixX<T>::write(vnx::TypeOutput& out, const vnx::TypeCode* type_code, con
 
 template<typename T>
 void MatrixX<T>::read(std::istream& in) {
-	std::array<size_t, 2> size_;
-	vnx::read_image_size<2>(in, size_);
-	resize(size_[0], size_[1]);
-	vnx::read_image_data<T, 2>(in, data_, size_);
+	throw std::logic_error("not implemented");
 }
 
 template<typename T>
