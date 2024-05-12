@@ -26,6 +26,10 @@
 
 namespace vnx {
 
+const TypeCode* type<::automy::math::Matrix2d>::get_type_code() {
+	return nullptr;
+}
+
 void type<::automy::math::Matrix2d>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Matrix2d());
 }
@@ -33,6 +37,10 @@ void type<::automy::math::Matrix2d>::create_dynamic_code(std::vector<uint16_t>& 
 void type<::automy::math::Matrix2d>::create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix2d& value, bool special) {
 	const std::vector<int> tmp = {21, 2, 2, 2, 10};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
+
+const TypeCode* type<::automy::math::Matrix3d>::get_type_code() {
+	return nullptr;
+}
 
 void type<::automy::math::Matrix3d>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Matrix3d());
@@ -42,6 +50,10 @@ void type<::automy::math::Matrix3d>::create_dynamic_code(std::vector<uint16_t>& 
 	const std::vector<int> tmp = {21, 2, 3, 3, 10};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
 
+const TypeCode* type<::automy::math::Matrix3f>::get_type_code() {
+	return nullptr;
+}
+
 void type<::automy::math::Matrix3f>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Matrix3f());
 }
@@ -49,6 +61,10 @@ void type<::automy::math::Matrix3f>::create_dynamic_code(std::vector<uint16_t>& 
 void type<::automy::math::Matrix3f>::create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix3f& value, bool special) {
 	const std::vector<int> tmp = {21, 2, 3, 3, 9};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
+
+const TypeCode* type<::automy::math::Matrix4d>::get_type_code() {
+	return nullptr;
+}
 
 void type<::automy::math::Matrix4d>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Matrix4d());
@@ -58,6 +74,10 @@ void type<::automy::math::Matrix4d>::create_dynamic_code(std::vector<uint16_t>& 
 	const std::vector<int> tmp = {21, 2, 4, 4, 10};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
 
+const TypeCode* type<::automy::math::Matrix4f>::get_type_code() {
+	return nullptr;
+}
+
 void type<::automy::math::Matrix4f>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Matrix4f());
 }
@@ -65,6 +85,10 @@ void type<::automy::math::Matrix4f>::create_dynamic_code(std::vector<uint16_t>& 
 void type<::automy::math::Matrix4f>::create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix4f& value, bool special) {
 	const std::vector<int> tmp = {21, 2, 4, 4, 9};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
+
+const TypeCode* type<::automy::math::MatrixXd>::get_type_code() {
+	return nullptr;
+}
 
 void type<::automy::math::MatrixXd>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::MatrixXd());
@@ -74,6 +98,10 @@ void type<::automy::math::MatrixXd>::create_dynamic_code(std::vector<uint16_t>& 
 	const std::vector<int> tmp = {22, 2, 10};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
 
+const TypeCode* type<::automy::math::MatrixXf>::get_type_code() {
+	return nullptr;
+}
+
 void type<::automy::math::MatrixXf>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::MatrixXf());
 }
@@ -81,6 +109,10 @@ void type<::automy::math::MatrixXf>::create_dynamic_code(std::vector<uint16_t>& 
 void type<::automy::math::MatrixXf>::create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::MatrixXf& value, bool special) {
 	const std::vector<int> tmp = {22, 2, 9};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
+
+const TypeCode* type<::automy::math::Vector2d>::get_type_code() {
+	return nullptr;
+}
 
 void type<::automy::math::Vector2d>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector2d());
@@ -90,6 +122,10 @@ void type<::automy::math::Vector2d>::create_dynamic_code(std::vector<uint16_t>& 
 	const std::vector<int> tmp = {21, 2, 2, 1, 10};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
 
+const TypeCode* type<::automy::math::Vector2f>::get_type_code() {
+	return nullptr;
+}
+
 void type<::automy::math::Vector2f>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector2f());
 }
@@ -97,6 +133,10 @@ void type<::automy::math::Vector2f>::create_dynamic_code(std::vector<uint16_t>& 
 void type<::automy::math::Vector2f>::create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2f& value, bool special) {
 	const std::vector<int> tmp = {21, 2, 2, 1, 9};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
+
+const TypeCode* type<::automy::math::Vector2i>::get_type_code() {
+	return nullptr;
+}
 
 void type<::automy::math::Vector2i>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector2i());
@@ -106,6 +146,10 @@ void type<::automy::math::Vector2i>::create_dynamic_code(std::vector<uint16_t>& 
 	const std::vector<int> tmp = {21, 2, 2, 1, 7};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
 
+const TypeCode* type<::automy::math::Vector3d>::get_type_code() {
+	return nullptr;
+}
+
 void type<::automy::math::Vector3d>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector3d());
 }
@@ -113,6 +157,10 @@ void type<::automy::math::Vector3d>::create_dynamic_code(std::vector<uint16_t>& 
 void type<::automy::math::Vector3d>::create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3d& value, bool special) {
 	const std::vector<int> tmp = {21, 2, 3, 1, 10};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
+
+const TypeCode* type<::automy::math::Vector3f>::get_type_code() {
+	return nullptr;
+}
 
 void type<::automy::math::Vector3f>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector3f());
@@ -122,6 +170,10 @@ void type<::automy::math::Vector3f>::create_dynamic_code(std::vector<uint16_t>& 
 	const std::vector<int> tmp = {21, 2, 3, 1, 9};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
 
+const TypeCode* type<::automy::math::Vector3i>::get_type_code() {
+	return nullptr;
+}
+
 void type<::automy::math::Vector3i>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector3i());
 }
@@ -129,6 +181,10 @@ void type<::automy::math::Vector3i>::create_dynamic_code(std::vector<uint16_t>& 
 void type<::automy::math::Vector3i>::create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3i& value, bool special) {
 	const std::vector<int> tmp = {21, 2, 3, 1, 7};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
+
+const TypeCode* type<::automy::math::Vector4d>::get_type_code() {
+	return nullptr;
+}
 
 void type<::automy::math::Vector4d>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector4d());
@@ -138,6 +194,10 @@ void type<::automy::math::Vector4d>::create_dynamic_code(std::vector<uint16_t>& 
 	const std::vector<int> tmp = {21, 2, 4, 1, 10};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
 
+const TypeCode* type<::automy::math::Vector4f>::get_type_code() {
+	return nullptr;
+}
+
 void type<::automy::math::Vector4f>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector4f());
 }
@@ -146,6 +206,10 @@ void type<::automy::math::Vector4f>::create_dynamic_code(std::vector<uint16_t>& 
 	const std::vector<int> tmp = {21, 2, 4, 1, 9};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
 
+const TypeCode* type<::automy::math::Vector4i>::get_type_code() {
+	return nullptr;
+}
+
 void type<::automy::math::Vector4i>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector4i());
 }
@@ -153,6 +217,10 @@ void type<::automy::math::Vector4i>::create_dynamic_code(std::vector<uint16_t>& 
 void type<::automy::math::Vector4i>::create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4i& value, bool special) {
 	const std::vector<int> tmp = {21, 2, 4, 1, 7};
 	code.insert(code.end(), tmp.begin(), tmp.end());}
+
+const TypeCode* type<::automy::math::Vector4uc>::get_type_code() {
+	return nullptr;
+}
 
 void type<::automy::math::Vector4uc>::create_dynamic_code(std::vector<uint16_t>& code) {
 	create_dynamic_code(code, ::automy::math::Vector4uc());
@@ -170,7 +238,7 @@ namespace automy {
 namespace math {
 
 
-static void register_all_types() {
+void register_all_types() {
 }
 
 static struct vnx_static_init {

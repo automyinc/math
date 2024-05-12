@@ -7,9 +7,19 @@
 #include <vnx/Type.h>
 
 
+#ifdef AUTOMY_MATH_EXPORT_ENABLE
+#include <automy_math_export.h>
+#else
+#ifndef AUTOMY_MATH_EXPORT
+#define AUTOMY_MATH_EXPORT
+#endif
+#endif
+
 
 namespace automy {
 namespace math {
+
+void register_all_types();
 
 
 class Matrix2d;
@@ -145,6 +155,7 @@ struct type<::automy::math::Matrix2d> {
 	void accept(Visitor& visitor, const ::automy::math::Matrix2d& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix2d& value, bool special = false);
 };
@@ -167,6 +178,7 @@ struct type<::automy::math::Matrix3d> {
 	void accept(Visitor& visitor, const ::automy::math::Matrix3d& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix3d& value, bool special = false);
 };
@@ -189,6 +201,7 @@ struct type<::automy::math::Matrix3f> {
 	void accept(Visitor& visitor, const ::automy::math::Matrix3f& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix3f& value, bool special = false);
 };
@@ -211,6 +224,7 @@ struct type<::automy::math::Matrix4d> {
 	void accept(Visitor& visitor, const ::automy::math::Matrix4d& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix4d& value, bool special = false);
 };
@@ -233,6 +247,7 @@ struct type<::automy::math::Matrix4f> {
 	void accept(Visitor& visitor, const ::automy::math::Matrix4f& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Matrix4f& value, bool special = false);
 };
@@ -255,6 +270,7 @@ struct type<::automy::math::MatrixXd> {
 	void accept(Visitor& visitor, const ::automy::math::MatrixXd& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::MatrixXd& value, bool special = false);
 };
@@ -277,6 +293,7 @@ struct type<::automy::math::MatrixXf> {
 	void accept(Visitor& visitor, const ::automy::math::MatrixXf& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::MatrixXf& value, bool special = false);
 };
@@ -299,6 +316,7 @@ struct type<::automy::math::Vector2d> {
 	void accept(Visitor& visitor, const ::automy::math::Vector2d& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2d& value, bool special = false);
 };
@@ -321,6 +339,7 @@ struct type<::automy::math::Vector2f> {
 	void accept(Visitor& visitor, const ::automy::math::Vector2f& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2f& value, bool special = false);
 };
@@ -343,6 +362,7 @@ struct type<::automy::math::Vector2i> {
 	void accept(Visitor& visitor, const ::automy::math::Vector2i& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector2i& value, bool special = false);
 };
@@ -365,6 +385,7 @@ struct type<::automy::math::Vector3d> {
 	void accept(Visitor& visitor, const ::automy::math::Vector3d& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3d& value, bool special = false);
 };
@@ -387,6 +408,7 @@ struct type<::automy::math::Vector3f> {
 	void accept(Visitor& visitor, const ::automy::math::Vector3f& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3f& value, bool special = false);
 };
@@ -409,6 +431,7 @@ struct type<::automy::math::Vector3i> {
 	void accept(Visitor& visitor, const ::automy::math::Vector3i& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector3i& value, bool special = false);
 };
@@ -431,6 +454,7 @@ struct type<::automy::math::Vector4d> {
 	void accept(Visitor& visitor, const ::automy::math::Vector4d& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4d& value, bool special = false);
 };
@@ -453,6 +477,7 @@ struct type<::automy::math::Vector4f> {
 	void accept(Visitor& visitor, const ::automy::math::Vector4f& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4f& value, bool special = false);
 };
@@ -475,6 +500,7 @@ struct type<::automy::math::Vector4i> {
 	void accept(Visitor& visitor, const ::automy::math::Vector4i& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4i& value, bool special = false);
 };
@@ -497,6 +523,7 @@ struct type<::automy::math::Vector4uc> {
 	void accept(Visitor& visitor, const ::automy::math::Vector4uc& value) {
 		vnx::accept(visitor, value);
 	}
+	const TypeCode* get_type_code();
 	void create_dynamic_code(std::vector<uint16_t>& code);
 	void create_dynamic_code(std::vector<uint16_t>& code, const ::automy::math::Vector4uc& value, bool special = false);
 };
